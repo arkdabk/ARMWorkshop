@@ -4,7 +4,7 @@
     "parameters": {
         "storageAccountName": {
             "type": "string",
-            "defaultValue": "basictemp1sa",
+            "defaultValue": "basictemp1sad131313",
             "metadata": {
                 "description": "The name of the Azure Storage account."
             }
@@ -30,7 +30,7 @@
     },
     "resources": [
         {
-            "name": "storageaccountforlogs4",
+            "name": "storageaccountad131313",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2018-02-01",
             "location":"[parameters('location')]",
@@ -80,7 +80,7 @@
         },
         "blobAccountURI":{
             "type": "string",
-            "value":"[reference('storageaccountforlogs4').primaryEndpoints.blob]"
+            "value":"[reference('storageaccountad131313').primaryEndpoints.blob]"
         }
     }
 }
