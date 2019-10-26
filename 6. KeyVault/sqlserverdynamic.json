@@ -11,18 +11,21 @@
         },
         "vaultName": {
             "type": "string",
+            "defaultValue": "azure-workshop-key-vault",
             "metadata": {
                 "description": "The name of the keyvault that contains the secret."
             }
         },
         "secretName": {
             "type": "string",
+            "defaultValue": "haslo",
             "metadata": {
                 "description": "The name of the secret."
             }
         },
         "vaultResourceGroupName": {
             "type": "string",
+            "defaultValue": "azure-workshop",
             "metadata": {
                 "description": "The name of the resource group that contains the keyvault."
             }
@@ -39,7 +42,7 @@
             "metadata": {
                 "description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
             },
-            "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-key-vault-use-dynamic-id/"
+            "defaultValue": "https://github.com/mifurm/ARMWorkshop/tree/master"
         },
         "_artifactsLocationSasToken": {
             "type": "securestring",
@@ -58,7 +61,7 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "contentVersion": "1.0.0.0",
-                    "uri": "[uri(parameters('_artifactsLocation'), concat('./nested/sqlserver.json', parameters('_artifactsLocationSasToken')))]"
+                    "uri": "[uri(parameters('_artifactsLocation'), concat('/sqlserverwithkv.json', parameters('_artifactsLocationSasToken')))]"
                 },
                 "parameters": {
                     "location": {
