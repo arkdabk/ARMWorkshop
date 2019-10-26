@@ -3,6 +3,6 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "admin-username": { "value": "azureuser" },
-        "admin-password": { "value": "<password>" }
+        "admin-password": { "value": "als!6@@llakdjalA" }
     }
   }
